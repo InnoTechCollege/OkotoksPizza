@@ -1,3 +1,27 @@
-img {
-    display: block;
+body h1 {
+    color: orange;
+}
+
+div > a {
+    font-size: 1.5em;
+}
+
+h3 + p {
+    font-style: italic;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+a:active {
+    font-size: 0.75em;
 }
