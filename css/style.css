@@ -1,27 +1,32 @@
-body h1 {
-    color: orange;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-div > a {
-    font-size: 1.5em;
+#grid-container {
+    display: grid;
 }
 
-h3 + p {
-    font-style: italic;
+#header {
+    display: grid;
+    grid-template-columns: 2fr 5fr 1fr 1fr 1fr;
+    min-height: 10vh;
+    justify-items: center;
+    align-items: center;
 }
 
-a:link {
-    color: red;
+#content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 85vh;
+    justify-items: center;
+    align-items: center;
 }
 
-a:visited {
-    color: black;
-}
-
-a:hover {
-    font-weight: bold;
-}
-
-a:active {
-    font-size: 0.75em;
+#footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 10vh;
+    justify-items: center;
+    align-items: center;
 }
