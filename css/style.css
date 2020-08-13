@@ -1,58 +1,148 @@
+@-webkit-keyframes changeColor {
+  0% {
+    color: black;
+  }
+  25% {
+    color: red;
+  }
+  50% {
+    color: green;
+    font-size: 1.3em;
+  }
+  75% {
+    color: purple;
+    font-size: 0.7em;
+  }
+  100% {
+    color: black;
+    font-size: 1em;
+  }
+}
+
 @keyframes changeColor {
-    0% { color: black; }
-    25% { color: red; }
-    50% { color: green; font-size: 1.3em; }
-    75% { color: purple; font-size: 0.7em; }
-    100% { color: black; font-size: 1em; }
+  0% {
+    color: black;
+  }
+  25% {
+    color: red;
+  }
+  50% {
+    color: green;
+    font-size: 1.3em;
+  }
+  75% {
+    color: purple;
+    font-size: 0.7em;
+  }
+  100% {
+    color: black;
+    font-size: 1em;
+  }
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
 }
 
 #grid-container {
-    display: grid;
+  display: grid;
 }
 
 #header {
+  display: grid;
+  min-height: 10vh;
+  justify-items: center;
+  align-items: center;
+}
+
+#content {
+  display: grid;
+  min-height: 85vh;
+  justify-items: center;
+  align-items: center;
+}
+
+#footer {
+  display: grid;
+  min-height: 10vh;
+  justify-items: center;
+  align-items: center;
+}
+
+#pizza-image:hover {
+  border-radius: 40px;
+  transition: border-radius 0.5s ease-in-out;
+}
+
+#pizza-image:active {
+  box-shadow: 5px 5px 7px grey;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+#watch-header {
+  animation-name: changeColor;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@media only screen and (min-width: 600px) {
+  #footer {
+    background-color: red;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  #grid-container {
+    display: grid;
+  }
+  
+  #header {
     display: grid;
     grid-template-columns: 2fr 5fr 1fr 1fr 1fr;
     min-height: 10vh;
     justify-items: center;
     align-items: center;
-}
-
-#content {
+  }
+  
+  #content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 85vh;
     justify-items: center;
     align-items: center;
-}
-
-#footer {
+  }
+  
+  #footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     min-height: 10vh;
     justify-items: center;
     align-items: center;
-}
-
-#pizza-image:hover {
+    background-color: green;
+  }
+  
+  #pizza-image:hover {
     border-radius: 40px;
     transition: border-radius 0.5s ease-in-out;
-}
-
-#pizza-image:active {
+  }
+  
+  #pizza-image:active {
     box-shadow: 5px 5px 7px grey;
     transition: box-shadow 0.5s ease-in-out;
-}
-
-#watch-header {
+  }
+  
+  #watch-header {
     animation-name: changeColor;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+  }
 }
