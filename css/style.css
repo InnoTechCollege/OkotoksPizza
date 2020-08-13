@@ -50,46 +50,72 @@ img {
 }
 
 #grid-container {
+  display: -ms-grid;
   display: grid;
 }
 
-#header {
+#grid-container #header {
+  display: -ms-grid;
   display: grid;
   min-height: 10vh;
   justify-items: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#content {
+#grid-container #content {
+  display: -ms-grid;
   display: grid;
   min-height: 85vh;
   justify-items: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FF0000;
 }
 
-#footer {
-  display: grid;
-  min-height: 10vh;
-  justify-items: center;
-  align-items: center;
+#grid-container #content h3 {
+  color: purple;
+  font-size: 30px;
 }
 
-#pizza-image:hover {
+#grid-container #content #pizza-image:hover {
   border-radius: 40px;
+  -webkit-transition: border-radius 0.5s ease-in-out;
   transition: border-radius 0.5s ease-in-out;
 }
 
-#pizza-image:active {
-  box-shadow: 5px 5px 7px grey;
+#grid-container #content #pizza-image:active {
+  -webkit-box-shadow: 5px 5px 7px grey;
+          box-shadow: 5px 5px 7px grey;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out;
   transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
+}
+
+#grid-container #footer {
+  display: -ms-grid;
+  display: grid;
+  min-height: 10vh;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #watch-header {
-  animation-name: changeColor;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  -webkit-animation-name: changeColor;
+          animation-name: changeColor;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 @media only screen and (min-width: 600px) {
@@ -100,49 +126,67 @@ img {
 
 @media only screen and (min-width: 1020px) {
   #grid-container {
+    display: -ms-grid;
     display: grid;
   }
-  
   #header {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 2fr 5fr 1fr 1fr 1fr;
+    -ms-grid-columns: 2fr 5fr 1fr 1fr 1fr;
+        grid-template-columns: 2fr 5fr 1fr 1fr 1fr;
     min-height: 10vh;
     justify-items: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  
   #content {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     min-height: 85vh;
     justify-items: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  
   #footer {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     min-height: 10vh;
     justify-items: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: green;
   }
-  
   #pizza-image:hover {
     border-radius: 40px;
+    -webkit-transition: border-radius 0.5s ease-in-out;
     transition: border-radius 0.5s ease-in-out;
   }
-  
   #pizza-image:active {
-    box-shadow: 5px 5px 7px grey;
+    -webkit-box-shadow: 5px 5px 7px grey;
+            box-shadow: 5px 5px 7px grey;
+    -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+    transition: -webkit-box-shadow 0.5s ease-in-out;
     transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
   }
-  
   #watch-header {
-    animation-name: changeColor;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    -webkit-animation-name: changeColor;
+            animation-name: changeColor;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
   }
 }
+/*# sourceMappingURL=style.css.map */
